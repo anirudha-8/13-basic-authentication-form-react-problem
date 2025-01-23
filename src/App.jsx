@@ -6,10 +6,13 @@ function App() {
 
 	const [password, setPassword] = useState("");
 
+	const [isRegistered, setIsRegistered] = useState(false);
+
 	const handleForm = () => {};
 
 	return (
 		<div>
+			<h1>{isRegistered ? "Login" : "Register"}</h1>
 			<form action="#">
 				<input
 					type="text"
@@ -31,11 +34,20 @@ function App() {
 				/>
 				<br />
 				<br />
-				<button onClick={handleForm}>Register / Login</button>
+				<button onClick={handleForm}>
+					{isRegistered ? "Login" : "Register"}
+				</button>
 			</form>
 			<br />
 			<hr />
 			<br />
+			<h2>
+				{isRegistered
+					? `Already have an account, please ${(
+							<button onClick={setIsRegistered(!isRegistered)}>Login</button>
+					  )}`
+					: "Please Register"}
+			</h2>
 		</div>
 	);
 }
