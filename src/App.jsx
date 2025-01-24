@@ -1,13 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-	const [userName, setUserName] = useState("");
-
-	const [password, setPassword] = useState("");
-
-	const [isRegistered, setIsRegistered] = useState(false);
-
 	const handleForm = () => {};
 
 	return (
