@@ -14,10 +14,13 @@ function App() {
 				action="#"
 				onSubmit={(e) => {
 					e.preventDefault();
-					if (!email && !password) {
+					if (!email.trim() && !password.trim()) {
 						alert("Both Email and Password are required!");
 						return;
 					}
+					alert(
+						`Your are ${isRegister ? "registered" : "logged in"} successfully!`
+					);
 				}}
 			>
 				<input
@@ -42,7 +45,9 @@ function App() {
 				/>
 				<br />
 				<br />
-				<button>{isRegister ? "Register" : "Login"}</button>
+				<button disabled={!email || !password}>
+					{isRegister ? "Register" : "Login"}
+				</button>
 			</form>
 			<p>
 				{isRegister
