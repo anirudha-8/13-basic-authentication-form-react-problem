@@ -5,8 +5,12 @@ function App() {
 		<div>
 			<form action="#">
 				<input type="email" name="email" id="email" />
+				<br />
+				<br />
 				<input type="password" name="password" id="password" />
-				<button>Login / Register</button>
+				<br />
+				<br />
+				<button> Login / Register</button>
 			</form>
 		</div>
 	);
