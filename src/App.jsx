@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+	const [email, setEmail] = useState("");
+
+	const [password, setPassword] = useState("");
+
+	const [isRegister, setIsRegister] = useState(false);
+
 	return (
 		<div>
 			<form action="#">
