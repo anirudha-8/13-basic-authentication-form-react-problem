@@ -26,6 +26,8 @@ function App() {
 
 	const handleLogOut = () => {
 		setIsLoggedIn(false);
+		setEmail("");
+		setPassword("");
 	};
 
 	return (
