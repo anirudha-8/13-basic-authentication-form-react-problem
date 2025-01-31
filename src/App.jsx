@@ -17,6 +17,10 @@ function App() {
 			// logic for login
 		} else {
 			// logic for register
+			const newUser = { email, password };
+			setUsers([...users, newUser]);
+			localStorage.setItem("users", JSON.stringify([...users, newUser]));
+			setIsLoggedIn(true);
 		}
 	};
 
