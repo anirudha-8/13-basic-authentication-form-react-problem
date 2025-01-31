@@ -16,7 +16,7 @@ function App() {
 		if (!isRegister) {
 			// logic for login
 			const user = users.find(
-				(u) => u.email == email && u.password == password
+				(u) => u.email === email && u.password === password
 			);
 			if (!isRegister && user) {
 				setIsLoggedIn(true);
@@ -26,8 +26,11 @@ function App() {
 		} else {
 			// logic for register
 			const newUser = { email, password };
-			setUsers([...users, newUser]);
-			localStorage.setItem("users", JSON.stringify([...users, newUser]));
+			setUsers((preUsers) => {
+				const updatedUsers = [...preUsers, newUser];
+				localStorage.setItem("users", JSON.stringify(updatedUsers));
+				return updatedUsers;
+			});
 			setIsLoggedIn(true);
 		}
 	};
