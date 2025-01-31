@@ -10,6 +10,8 @@ function App() {
 
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+	const [users, setUsers] = useState([]);
+
 	return (
 		<div>
 			{isLoggedIn ? (
