@@ -51,7 +51,7 @@ function App() {
 				</div>
 			) : (
 				<div>
-					<h1>{isRegister ? "Login" : "Register"}</h1>
+					<h1>{isRegister ? "Register" : "Login"}</h1>
 					<form
 						action="#"
 						onSubmit={(e) => {
