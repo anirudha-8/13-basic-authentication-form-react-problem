@@ -49,6 +49,8 @@ function App() {
 					{isRegister ? "Register" : "Login"}
 				</button>
 			</form>
+			<br />
+			<hr />
 			<p>
 				{isRegister
 					? "Already have an account? Log in."
