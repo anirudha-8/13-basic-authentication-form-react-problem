@@ -24,13 +24,17 @@ function App() {
 		}
 	};
 
+	const handleLogOut = () => {
+		setIsLoggedIn(false);
+	};
+
 	return (
 		<div>
 			{isLoggedIn ? (
 				<div>
 					<h2>Welcome, {email}</h2>
 					<br />
-					<button>Log Out</button>
+					<button onClick={handleLogOut}>Log Out</button>
 				</div>
 			) : (
 				<div>
