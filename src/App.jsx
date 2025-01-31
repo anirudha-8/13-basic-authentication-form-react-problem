@@ -13,12 +13,12 @@ function App() {
 	const [users, setUsers] = useState([]);
 
 	const handleAuthentication = () => {
-		if (isRegister) {
+		if (!isRegister) {
 			// logic for login
 			const user = users.find(
 				(u) => u.email == email && u.password == password
 			);
-			if (isRegister && user) {
+			if (!isRegister && user) {
 				setIsLoggedIn(true);
 			} else {
 				alert("User not found, log in failed!");
