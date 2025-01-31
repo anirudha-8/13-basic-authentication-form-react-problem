@@ -15,6 +15,14 @@ function App() {
 	const handleAuthentication = () => {
 		if (isRegister) {
 			// logic for login
+			const user = users.find(
+				(u) => u.email == email && u.password == password
+			);
+			if (isRegister && user) {
+				setIsLoggedIn(true);
+			} else {
+				alert("User not found, log in failed!");
+			}
 		} else {
 			// logic for register
 			const newUser = { email, password };
