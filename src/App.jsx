@@ -12,6 +12,14 @@ function App() {
 
 	const [users, setUsers] = useState([]);
 
+	const handleAuthentication = () => {
+		if (isRegister) {
+			// logic for login
+		} else {
+			// logic for register
+		}
+	};
+
 	return (
 		<div>
 			{isLoggedIn ? (
@@ -60,7 +68,10 @@ function App() {
 						/>
 						<br />
 						<br />
-						<button disabled={!email || !password}>
+						<button
+							onClick={handleAuthentication}
+							disabled={!email || !password}
+						>
 							{isRegister ? "Register" : "Login"}
 						</button>
 					</form>
